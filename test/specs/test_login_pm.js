@@ -42,7 +42,7 @@ describe('Login',() => {
         await rejectTextElement.waitForDisplayed(5000);
         const rejectText = await rejectTextElement.getText();
         console.warn (rejectText); 
-        assert.notDeepEqual(rejectText, 'К сожалению, счета, зарегистрированные в валюте USD и EUR и которые состоят из 9 цифр');//метод подбирала, в документации wdio не могу найти подробное описание методов у assert
+        assert.notDeepStrictEqual(rejectText, 'К сожалению, счета, зарегистрированные в валюте USD и EUR и которые состоят из 9 цифр');//метод подбирала, в документации wdio не могу найти подробное описание методов у assert
     
 
     });
